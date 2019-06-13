@@ -4,30 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">\
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Elizabeth Emig Portfolio</title>
 </head>
 
 <body>
     <header>
-        <nav>Navigation</nav>
+        <div class="logo">
+            <p>ee</p>
+        </div>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Connect</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section>
-            Hero
+    <main role="main">
+        <section id="hero" role="banner">
+            <h1>
+                <span>Hello, my name is</span>
+                Elizabeth Emig
+                <span>and I am a</span>
+                Web Developer
+            </h1>
         </section>
-        <section>
-            Selected works
+        <section id="work">
+            <h2>Selected Works</h2>
+            <div class="container">
+                <div class="work">
+                    <a href="#">
+                        <div class="img-container">
+                            <img src="#" alt="#" />
+                        </div>
+                        <div class="title">
+                            <p>Title</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </section>
-        <section>
-            About
+        <section id="about">
+            <h2>About</h2>
         </section>
-        <section>
-            Connect
+        <section id="connect">
+            <h2>Connect</h2>
         </section>
     </main>
-    <footer>Footer</footer>
+    <footer role="navigation">Footer</footer>
 </body>
 
 </html>
