@@ -4,6 +4,11 @@
 html {
     font-size: 62.5%;
 }
+
+p, ul, li, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
 body {
     font-size: 1.6rem;
     line-height: 1.625;
@@ -14,12 +19,22 @@ body {
     border-right: 0.5rem solid #000; 
     position: relative;
 }
-p, ul, li, h1, h2, h3, h4 {
-    margin: 0;
-    padding: 0;
+p {
+    margin-bottom: 1.5rem;
 }
 .container {
     padding: 0 1rem;
+}
+.btn {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem 2.5rem;
+}
+.btn-primary {
+    border: 3px solid #000;
+    background-color: transparent;
+    color: #000;
 }
 header, footer {
     background-color: #000;
@@ -45,32 +60,52 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+#work, #about, #connect {
+    padding: 4rem 0 6rem;
+}
+/* HERO */
 #hero {
     height: 100vh;
     position: relative;
     background-color: #444;
     color: #fff;
 }
-#work, #about, #connect {
-    padding: 4rem 0 6rem;
+#hero h1 {
+    padding-top: 60%;
 }
+#hero h1 span {
+    display: block;
+}
+/* WORK */
 #work {
     background-color: #999;
 }
-#work a {
+.work {
+    margin-bottom: 2rem;
+}
+.work a {
     text-decoration: none;
     color: #000;
 }
-#work .img-container {
+.work .img-container {
     width: 100%;
     height: 20rem;
     background-color: #ddd;
 }
-#work .title {
+.work .title {
     padding: 1.5rem 1rem;
     background-color: #fff;
 
 }
+/* ABOUT */
 #about {
     background-color: #bbb;
+}
+/* CONNECT */
+#connect {
+    text-align: center;
+}
+#connect a {
+    text-decoration: none;
+    
 }
