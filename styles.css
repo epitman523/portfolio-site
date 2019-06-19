@@ -150,16 +150,7 @@ h2 {
 #about {
     position: relative;
 }
-#about::after {
-    content: ' ';
-    display: block;
-    position: absolute;
-    top: 10%;
-    bottom: 0;
-    right: 0;
-    background-color: #444;
-    width: 100%;
-}
+
 #about .container {
     display: flex;
     flex-flow: row-reverse;
@@ -181,10 +172,6 @@ h2 {
     padding: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-    #about::after {
-        top: 17.5%;
-        width: 66%;
-    }
     #about .container {
         flex-wrap: nowrap;
     }
