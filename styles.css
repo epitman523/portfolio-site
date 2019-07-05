@@ -26,6 +26,14 @@ body {
 p {
     margin-bottom: 1.5rem;
 }
+a {
+    text-decoration: none;
+    color: #EDFEFD;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+    color: #3BF5A7;
+}
 .container {
     padding: 0 1rem;
 }
@@ -46,13 +54,17 @@ p {
     padding: 1rem 2.5rem;
 }
 .btn-primary {
-    border: 3px solid #453D3D;
+    border-width: 3px;
+    border-style: solid;
     background-color: transparent;
-    color: #453D3D;
+}
+.btn-primary.light {
+    color: #EDFEFD;
+    border-color: #EDFEFD;
 }
 header, footer {
     background-color: #176160;
-    color: #fff;
+    color: #EDFEFD;
     padding: 1rem 0;
 }
 
@@ -76,8 +88,6 @@ header .container > nav ul {
 }
 header .container > nav ul a {
     padding: 0 1rem;
-    color: #fff;
-    text-decoration: none;
 }
 #work, #about, #connect {
     padding: 4rem 0 6rem;
@@ -181,7 +191,6 @@ header .container > nav ul a {
 #about .experience {
     background-color: #176160;
     width: 100%;
-    height: 40rem;
 }
 #about .bio {
     padding: 1.5rem 0 1.5rem 1.5rem;
