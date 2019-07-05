@@ -220,6 +220,7 @@ header .container > nav ul a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: #176160;
 }
 .work {
     margin-bottom: 2rem; 
@@ -250,8 +251,8 @@ header .container > nav ul a {
 }
 @media screen and (min-width: 768px) {
     #work::after {
-        width: 85%;
-        top: 10%;
+        width: 50%;
+        top: 5.8rem;
     }
     .work:first-child, 
     .work:nth-child(4) {
