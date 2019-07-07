@@ -22,6 +22,7 @@ p, ul, li, h1, h2, h3, h4 {
 h1, h2, h3, h4 {
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
+    color: #EDFEFD;
 }
 h1 {
     font-size: 3.2rem;
@@ -30,12 +31,17 @@ h1 {
 h2 {
     font-size: 2.6rem;
     margin-bottom: 2rem;
+    border-top: 1px solid #EDFEFD;
+    border-bottom: 1px solid #EDFEFD;
+    display: inline-block;
 }
 h3 {
-    font-size: 2.2rem;
+    border-bottom: 1px solid #EDFEFD;
+    margin-bottom: 1.5rem;
 }
 h4 {
     font-size: 1.8rem;
+    color: #3BF5A7;
 }
 @media screen and (min-width: 768px) {
     body {
@@ -145,9 +151,6 @@ header .container > nav ul a {
     }
 }
 
-
-
-
 /* HERO */
 #hero {
     position: relative;
@@ -190,23 +193,27 @@ header .container > nav ul a {
         font-size: 7rem;
     }
 }
+
+
 #work, #about, #connect {
     padding: 4rem 0 6rem;
+    text-align: center;
 }
+
 #work h2, 
 #about h2, 
 #connect h2 {
     text-align: center;
 }
-
+#work .container, #about .container {
+    text-align: left;
+}
 
 /* WORK */
 #work {
     position: relative;
 }
 #work::after {
-    
-    
     width: 100%;
 }
 #work .container {
@@ -217,6 +224,7 @@ header .container > nav ul a {
     flex-wrap: wrap;
     background-color: #176160;
     padding-bottom: 10rem;
+    text-align: left;
 }
 .work {
     margin-bottom: 2rem; 
@@ -284,14 +292,16 @@ header .container > nav ul a {
     flex-wrap: wrap;
     position: relative;
     z-index: 2;
+    color: #EDFEFD;
 }
 #about .bio, 
 #about .experience {
     background-color: #176160;
     width: 100%;
+    padding: 2rem 2rem 4rem;
 }
 #about .bio {
-    padding: 1.5rem 0 1.5rem 1.5rem;
+
 }
 #about .experience {
     padding: 1.5rem;
