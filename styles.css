@@ -14,6 +14,7 @@ body {
     border-right: 0.5rem solid #176160; 
     position: relative;
     background-color: #228B89;
+    color: #453D3D;
 }
 p, ul, li, h1, h2, h3, h4 {
     margin: 0;
@@ -59,6 +60,7 @@ h4 {
     }
     .container {
         max-width: 112rem;
+        width: 100%;
         margin: 0 auto;
     }
 }
@@ -151,6 +153,55 @@ header .container > nav ul a {
     }
 }
 
+/* Footer */
+footer .container {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    text-align: center;
+}
+footer .container p, footer .container nav {
+    width: 100%;
+}
+footer .container p {
+    margin-bottom: 0;
+}
+footer .container p i {
+    font-size: 1rem;
+}
+footer .container nav {
+    margin-bottom: 2rem;
+}
+footer .container nav ul {
+    list-style-type: none;
+}
+footer .container ul li {
+    margin-bottom: 0.5rem;
+}
+footer .container nav ul li a {
+    display: block;
+}
+@media screen and (min-width: 768px) {
+    footer .container{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+    footer .container p, footer .container nav {
+        width: 50%;
+    }
+    footer .container nav {
+        margin-bottom: 0;
+    }
+    footer .container nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    footer .container nav ul li {
+        padding-left: 1rem;
+    }
+}
+
 /* HERO */
 #hero {
     position: relative;
@@ -222,7 +273,7 @@ header .container > nav ul a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: #176160;
+    background-color: #1E7D7B;
     padding-bottom: 10rem;
     text-align: left;
 }
@@ -241,7 +292,7 @@ header .container > nav ul a {
 }
 .work a {
     text-decoration: none;
-    color: #000;
+    color: #453D3D;
 }
 .work .img-container {
     width: 100%;
@@ -259,17 +310,17 @@ header .container > nav ul a {
 @media screen and (min-width: 768px) {
     #work .container {
         margin-bottom: -6rem;
-        
+        padding: 2rem;
     }
     #work::after {
         content: ' ';
         display: block;
         position: absolute;
         width: 50%;
-        top: 11.8rem;
+        top: 12rem;
         left: 0;
         bottom: 0;
-        background-color: #176160;
+        background-color: #1E7D7B;
     }
     .work:first-child, 
     .work:nth-child(4) {
@@ -284,7 +335,12 @@ header .container > nav ul a {
 #about {
     position: relative;
 }
-
+#about::after {
+    width: 100%;
+}
+#about h2 {
+    margin-top: 10rem;
+}
 #about .container {
     display: flex;
     flex-flow: row-reverse;
@@ -292,7 +348,9 @@ header .container > nav ul a {
     flex-wrap: wrap;
     position: relative;
     z-index: 2;
+    background-color: #1E7D7B;
     color: #EDFEFD;
+    
 }
 #about .bio, 
 #about .experience {
@@ -300,7 +358,9 @@ header .container > nav ul a {
     width: 100%;
     padding: 2rem 2rem 4rem;
 }
-
+#about .bio {
+    background-color: #1E7D7B;
+}
 #about .experience {
     padding: 1.5rem;
 }
@@ -309,8 +369,20 @@ header .container > nav ul a {
     margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
+    #about::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 50%;
+        top: 22rem;
+        right: 0;
+        bottom: 0;
+        background-color: #1E7D7B;
+    }
     #about .container {
         flex-wrap: nowrap;
+        margin-bottom: -6rem;
+        background-color: transparent;
     }
     #about .bio {
         width: calc(74% - 1rem);
@@ -324,25 +396,36 @@ header .container > nav ul a {
     text-align: center;
     padding: 10rem 0;
 }
-#connect span {
-    display: inline-block;
-    background-color: #444;
-    width: 4rem;
-    height: 4rem;
-    margin: 0 1.5rem;
+#connect ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+#connect ul li {
+    padding: 2rem;
 }
 
 /* Portfolio Pg */
 .portfolio #work {
-    height: 100vh;
     text-align: center;
 }
 .portfolio #work::after {
-    top: 22.54%;
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 50%;
+    top: 20.25rem;
+    left: 0;
+    /* bottom: 0; */
+    background-color: #1E7D7B;
 }
+
 .portfolio #work h1 {
     margin: 4rem 0 6rem;
 }
+
 
 /* Portfolio-Single Pg */
 .portfolio-single main {
@@ -360,9 +443,10 @@ header .container > nav ul a {
 }
 .portfolio-single main .about-project {
     width: 100%;
-    background-color: #fff;
+    background-color: #1E7D7B;
+    color: #EDFEFD;
     height: 60rem;
-    padding: 1.5rem;
+    padding: 2rem;
     margin-bottom: 2rem;
 }
 .portfolio-single main .col {
@@ -374,17 +458,21 @@ header .container > nav ul a {
 }
 .portfolio-single main .col .img-container {
     height: 20rem;
-    background-color: #444;
+    background-color: #ddd;
 }
 .portfolio-single main .col .tech-used {
     height: 40rem;
-    background-color: #ddd;
-    padding: 1.5rem;
+    background-color: #176160;
+    padding: 2rem;
     margin-bottom: 2rem;
+}
+.portfolio-single main .col .tech-used ul {
+    list-style-type: none;
+    color: #EDFEFD;
 }
 .portfolio-single main .img-container:nth-child(3) {
     width: 100%;
-    background-color: #444;
+    background-color: #ddd;
     height: 30rem;
 }
 @media screen and (min-width: 768px) {
