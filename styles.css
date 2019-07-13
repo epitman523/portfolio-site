@@ -81,6 +81,7 @@ p {
 a {
     text-decoration: none;
     color: #EDFEFD;
+    transition: all 0.3s;
 }
 a:hover, a:focus {
     text-decoration: underline;
@@ -94,16 +95,40 @@ a:hover, a:focus {
     text-decoration: none;
     text-align: center;
     padding: 1rem 2.5rem;
+    position: relative;
 }
 .btn-primary {
     border-width: 3px;
     border-style: solid;
     background-color: transparent;
 }
+.btn-primary::before {
+    content: ' ';
+    position: absolute;
+    display: inline-block;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+}
 .btn-primary.light {
     color: #EDFEFD;
     border-color: #EDFEFD;
 }
+.btn-primary.light:hover, 
+.btn-primary.light:focus {
+    text-decoration: none;
+    color: #1E7D7B;
+}
+.btn-primary.light:hover::before, 
+.btn-primary.light:focus::before {
+    width: 100%;
+    background-color: #EDFEFD;
+    z-index: -1;
+}
+
+
 header, footer {
     background-color: #176160;
     color: #EDFEFD;
@@ -216,6 +241,12 @@ footer .container nav ul li a {
     display: block;
     font-size: 3rem;
     font-weight: 700;
+}
+#hero h1 span.whatami {
+    display: none;
+}
+#hero h1 span.whatami.active {
+    display: block;
 }
 @media screen and (min-width: 500px) {
     #hero h1 {
