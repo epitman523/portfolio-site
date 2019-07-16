@@ -569,6 +569,3 @@ footer .container nav ul li a {
 
 
 /* Quiz App page */
-#quiz-app .container .col .img-container img {
-    transform: rotate(90deg);
-}
