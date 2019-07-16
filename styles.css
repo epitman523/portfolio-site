@@ -124,8 +124,8 @@ a:hover, a:focus {
 .btn-primary.light:hover::before, 
 .btn-primary.light:focus::before {
     width: 100%;
-    background-color: #EDFEFD;
     z-index: -1;
+    background-color: #EDFEFD;
 }
 
 
@@ -194,7 +194,7 @@ footer .container p {
 footer .container p i {
     font-size: 1rem;
 }
-footer .container nav {
+/* footer .container nav {
     margin-bottom: 2rem;
 }
 footer .container nav ul {
@@ -205,16 +205,16 @@ footer .container ul li {
 }
 footer .container nav ul li a {
     display: block;
-}
+} */
 @media screen and (min-width: 768px) {
-    footer .container{
+    /* footer .container{
         flex-direction: row;
         flex-wrap: nowrap;
-        text-align: left;
-    }
-    footer .container p, footer .container nav {
+        text-align: center;
+    } */
+    /* footer .container p, footer .container nav {
         width: 50%;
-    }
+    } */
     footer .container nav {
         margin-bottom: 0;
     }
@@ -331,6 +331,7 @@ footer .container nav ul li a {
     height: 20rem;
     overflow: hidden;
     position: relative;
+    background-color: #176160;
 }
 .work .img-container .overlay {
     display: block;
@@ -350,7 +351,7 @@ footer .container nav ul li a {
     font-size: 5rem;
     text-align: center;
     vertical-align: middle;
-    line-height: 40rem;
+    line-height: 20rem;
 }
 .work:first-child .img-container {
     background: #1E7D7B url('images/quiz-app/weatherQ8.JPG') no-repeat center;
@@ -384,6 +385,9 @@ footer .container nav ul li a {
     }
     .work .img-container .overlay {
         height: 40rem;
+    }
+    .work .img-container .overlay p {
+        line-height: 40rem;
     }
     .work:first-child, 
     .work:nth-child(4) {
@@ -493,7 +497,7 @@ footer .container nav ul li a {
 /* Portfolio-Single Pg */
 .portfolio-single main {
     position: relative;
-    padding: 4rem 0 6rem;
+    padding: 11rem 0;
 }
 .portfolio-single main h1 {
     margin: 4rem 0 6rem;
@@ -506,10 +510,21 @@ footer .container nav ul li a {
 }
 .portfolio-single main .about-project {
     width: 100%;
-    background-color: #1E7D7B;
     color: #EDFEFD;
     padding: 2rem;
     margin-bottom: 2rem;
+    position: relative;
+}
+.portfolio-single main .about-project::before {
+    content: ' ';
+    display: block;
+    background-color: #1E7D7B;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
 }
 .portfolio-single main .about-project ul {
     margin-left: 4rem;
@@ -517,27 +532,31 @@ footer .container nav ul li a {
 .portfolio-single main .about-project ul li {
     margin-bottom: 1rem;
 }
+.portfolio-single main .about-project .links {
+    margin-top: 5rem;
+}
+.portfolio-single main .about-project .links a:first-child {
+    margin-bottom: 1rem;
+}
 .portfolio-single main .col {
     width: 100%;
-    margin-bottom: 2rem;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
 }
-.portfolio-single main .col .img-container {
+.portfolio-single main .img-container {
     background-color: #1E7D7B;
     line-height: 0;
     margin-bottom: 2rem;
-
 }
-.portfolio-single main .col .img-container img {
+.portfolio-single main img {
     width: 100%;
 }
 .portfolio-single main .col .tech-used {
     height: 100%;
     background-color: #176160;
     padding: 2rem;
-    /* margin-bottom: 2rem; */
+    margin-bottom: 2rem;
 }
 .portfolio-single main .col .tech-used ul {
     list-style-type: none;
@@ -548,9 +567,42 @@ footer .container nav ul li a {
     background-color: #ddd;
     /* height: 30rem; */
 }
+@media screen and (min-width: 500px) {
+    .portfolio-single main .col {
+        flex-flow: row-reverse;
+        margin-bottom: 2rem;
+    }
+    .portfolio-single main .about-project .links {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .portfolio-single main .about-project .links a:first-child {
+        margin-bottom: 0;
+    }
+    .portfolio-single main .col .img-container {
+        margin-bottom: 0;
+    }
+    .portfolio-single main .about-project .links a,
+    .portfolio-single main .col .tech-used,
+    .portfolio-single main .col .img-container,
+    .portfolio-single main .img-container:nth-child(4) {
+        width: calc(50% - 1rem);
+    }
+}
 @media screen and (min-width: 768px) {
     .portfolio-single main .col {
         flex-flow: column-reverse;
+    }
+    .portfolio-single main .col .tech-used {
+        margin-bottom: 0;
+    }
+    .portfolio-single main .col .tech-used,
+    .portfolio-single main .col .img-container {
+        width: 100%;
+    }
+    .portfolio-single main .col .img-container {
+        margin-bottom: 2rem;
     }
     /* .portfolio-single main .col .img-container {
         height: calc(50% - 1rem);
@@ -559,13 +611,18 @@ footer .container nav ul li a {
         height: calc(50% - 1rem);
         margin-bottom: 0;
     } */
-    .portfolio-single main .about-project {
+    .portfolio-single main .about-project,
+    .portfolio-single main .img-container:nth-child(4) {
         width: calc(60% - 1rem);
     }
-    .portfolio-single main .col {
+    .portfolio-single main .col,
+    .portfolio-single main .img-container:nth-child(3) {
         width: calc(40% - 1rem);
     }
 }
 
 
 /* Quiz App page */
+#quiz-app .container .img-container:nth-child(4) {
+    align-self: flex-start;
+}
